@@ -14,7 +14,7 @@
       <li>Get KML / GeoJSON data.</li>
       <li>List the boundary area in a register that a location> is in.</li>
       <li>List entries in a register X that lie within a boundary defined by an entry in another register.</li>
-      <li>List the “nearest” entry in a register to a "location" within a boundary defined by an entry in another register.</li>
+      <li>List the "nearest" entry in a register to a "location" within a boundary defined by an entry in another register.</li>
       <li>List entries in a register within a selected "distance" of a "location".</li>
       <li>List entries in a register within a selected "distance" of a "location" that lie within a boundary defined by an entry in another register.</li>    
   </body>
