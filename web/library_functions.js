@@ -36,7 +36,10 @@ function loadData(element, fromLocation) {
 
 function registerSelectOnChanges() {
   $('select').each(function() {
-    $("#" + this.id).onchange(doOnChange());
+  
+  console.log("#" + this.id);
+  
+    $("#" + this.id).change(doOnChange());
   });
 }
 
