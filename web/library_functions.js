@@ -1,10 +1,10 @@
 // Library functions
 
 // Get data from URL and stick in a text box
-function urlToBox(url, box) {
-  var jqxhr = $.get(url)
+function fiilLocationRegistersBox() {
+  var jqxhr = $.get("registers-with-a-location.txt")
     .done(function(data) {
-      $("$" . box).val(data);
+      $("registers-with-locations-box").val(data);
     })
     .fail(function() {
       alert( "Failed to get data to put in a text box!" );
