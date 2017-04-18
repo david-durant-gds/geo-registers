@@ -7,7 +7,7 @@ function fillLocationRegistersBox() {
       $("#registers-with-locations-box").val(data);
     })
     .fail(function() {
-      alert( "Failed to get data to put in a text box!" );
+      alert( "fillLocationRegistersBox failed!" );
     });
 }
 
@@ -18,8 +18,26 @@ function fillBoundaryRegistersBox() {
       $("#registers-with-boundaries-box").val(data);
     })
     .fail(function() {
-      alert( "Failed to get data to put in a text box!" );
+      alert( "fillBoundaryRegistersBox failed!" );
     });
+}
+
+// Update the select of registers that have a boundary
+function updateSelectOfRegistersWithBoundaries() {
+  var jqxhr = $.get("registers-with-a-boundary.txt")
+    .done(function(data) {
+
+      var $el = $("#registers-with-boundaries-select");
+      $el.empty();
+      $.each(data, function(registerName) {
+        $el.append($("<option></option>").attr("value", registerName).text(registerName));
+      });
+
+    })
+    .fail(function() {
+      alert( "updateSelectOfRegistersWithBoundaries failed!" );
+    });
+
 }
 
 // Re-centre and re-zoom a passed-in map

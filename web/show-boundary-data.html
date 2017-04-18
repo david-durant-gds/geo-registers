@@ -11,16 +11,16 @@
     </p>
     <form>
       <fieldset>
-        <p>
-          <label>Register data</label>
-          <p/>
+        <label>Registers with boundaries</label>
+        <select id="registers-with-boundaries-select"></select>
+        <label>List of boundaries for <span id="registerName"></span></label>
+        <select id="list-of-boundaries-select"></select>
+        <p/>
           <textarea
-                  id = "registers-with-boundaries-box"
+                  id = "specific-boundary-data-box"
                   rows = "10"
-                  cols = "40">
+                  cols = "60">
           </textarea>
-        </p>
-        <button onclick="fillBoundaryRegistersBox()" type="button">Click to load data</button>
       </fieldset>
     </form>
     <a href="index.php">Go back to main page</a>

@@ -11,7 +11,7 @@
     <ul>
       <li><a href="registers-with-locations.html">List registers that have entries that contain geospatial locations</a></li>
       <li><a href="registers-with-boundaries.html">List registers that have entries that relate to geospatial boundaries</a></li>
-      <li>Get KML / GeoJSON data</li>
+      <li><a href="show-boundary-data.html">Get KML / GeoJSON data</a></li>
       <li>List the boundary area in a register that a location> is in</li>
       <li>List entries in a register X that lie within a boundary defined by an entry in another register</li>
       <li>List the "nearest" entry in a register to a "location" within a boundary defined by an entry in another register</li>
