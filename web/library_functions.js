@@ -5,39 +5,35 @@ var globalWidgetData;
 function pageStart(element) {
   $.getJSON("global-widget-data.json", function(result){
     globalWidgetData = result;  
-    loadData(element);
+    loadData(element, element);
 
 //    registerSelectOnChanges();
-//    $("#" + inputElement).trigger( "change" );
+
   });
 }
 
-function loadData(element) {
+function loadData(element, fromLocation) {
 
-console.log($("#" + element).is());
+  var jqxhr = $.get(fromLocation + ".txt", { element: element })
+    .done(function(data) {
+      var $el = $("#" + element);
+      $el.empty();
 
-/*
-  if ($("#" + element).is('select')) {
-    var jqxhr = $.get(element + ".txt", { element: element })
-      .done(function(data) {
-        var $el = $("#" + element);
-        $el.empty();
+      if ($el.is('select')) {
         splitData = data.split("\n");
         $.each(splitData, function(loopNumber, value) {
           $el.append($("<option></option>").attr("value", value).text(value));
-      });
+        });
+      }
+      else if ($el.is('textarea')) {
+        $el.val(data);
+      } 
+      
     })
     .fail(function() {
       alert("Failed to load select : " + element);
     });
 
-  }
-  else if (($("#" + element).is('textarea')) {
-  
-  
-  
-  }
-*/
 }
 
 

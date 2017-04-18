@@ -5,7 +5,7 @@
     <script src="https://enigmatic-dusk-83533.herokuapp.com/library_functions.js" type="text/javascript"></script>
   </head>
   
-  <body>
+  <body onLoad="pageStart('registers-with-boundaries')">
     <h2>Firebreak : Experimenting with geographical data and registers!</h2>
     <h3>Get registers that contain geographic boundaries</h3>
     </p>
@@ -15,12 +15,11 @@
           <label>Register data</label>
           <p/>
           <textarea
-                  id = "registers-with-boundaries-box"
+                  id = "registers-with-boundaries"
                   rows = "10"
                   cols = "40">
           </textarea>
         </p>
-        <button onclick="fillBoundaryRegistersBox()" type="button">Click to load data</button>
       </fieldset>
     </form>
     <a href="index.php">Go back to main page</a>
