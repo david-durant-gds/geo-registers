@@ -38,8 +38,9 @@ function registerSelectOnChanges() {
   $('select').each(function() {
   
   console.log("#" + this.id);
+  $("#registers-with-boundaries").change(doOnChange());
   
-    $("#" + this.id).change(doOnChange());
+//    $("#" + this.id).change(doOnChange());
   });
 }
 
