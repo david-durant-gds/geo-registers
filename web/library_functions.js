@@ -65,13 +65,23 @@ function registerWithBoundarySelected() {
 
     })
     .fail(function() {
-      alert( "updateSelectOfRegistersWithBoundaries failed!" );
+      alert( "registerWithBoundarySelected failed!" );
     });  
   
 }
 
 // Fill in the box with specific boundary data
 function specificBoundarySelected() {
+  selectedBoundary = $( "#list-of-boundaries-select option:selected" ).text();
+
+  registerBoundaryData = selectedBoundary + "-boundary-data.txt";
+  var jqxhr = $.get(registerBoundaryList)
+    .done(function(data) {
+      $("#specific-boundary-data-box").val(data);
+    })
+    .fail(function() {
+      alert( "registerWithBoundarySelected failed!" );
+    }); 
 
 }
 
