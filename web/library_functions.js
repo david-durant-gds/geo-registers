@@ -35,7 +35,7 @@ function updateSelectOfRegistersWithBoundaries() {
       });
 
       // Need to manually fire the change function for the first entry as onChange doesn't trigger unless a new thing is selected :-(
-      registerWithBoundarySelected(splitData[0]);
+      registerWithBoundarySelected();
 
     })
     .fail(function() {
@@ -45,8 +45,8 @@ function updateSelectOfRegistersWithBoundaries() {
 }
 
 // Update text and select for list boundaries with a register that contains boundaries
-function registerWithBoundarySelected(boundary) {
-  $('#registerName').text(boundary);
+function registerWithBoundarySelected() {
+  $('#registerName').text($( "#registers-with-boundaries-select option:selected" ).text(););
 }
 
 // Re-centre and re-zoom a passed-in map
