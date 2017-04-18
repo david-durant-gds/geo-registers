@@ -20,7 +20,7 @@ function fillBoundaryRegistersBox() {
     .fail(function() {
       alert( "Failed to get data to put in a text box!" );
     });
-
+}
 
 // Re-centre and re-zoom a passed-in map
 
