@@ -10,7 +10,7 @@
     Things we've done:
     <ul>
       <li><a href="registers-with-locations.html">List registers that have entries that contain geospatial locations</a>.</li>
-      <li>List registers that have entries that relate to geospatial boundaries.</li>
+      <li><a href="registers-with-boundaries.html"List registers that have entries that relate to geospatial boundaries</a>.</li>
       <li>Get KML / GeoJSON data.</li>
       <li>List the boundary area in a register that a location> is in.</li>
       <li>List entries in a register X that lie within a boundary defined by an entry in another register.</li>
