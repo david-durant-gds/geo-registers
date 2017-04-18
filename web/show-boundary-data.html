@@ -5,15 +5,18 @@
     <script src="https://enigmatic-dusk-83533.herokuapp.com/library_functions.js" type="text/javascript"></script>
   </head>
   
-  <body>
+  <body onload="updateSelectOfRegistersWithBoundaries">
     <h2>Firebreak : Experimenting with geographical data and registers!</h2>
     <h3>Get registers that contain geographic boundaries</h3>
     </p>
     <form>
       <fieldset>
         <label>Registers with boundaries</label>
+        <p/>
         <select id="registers-with-boundaries-select"></select>
-        <label>List of boundaries for <span id="registerName"></span></label>
+        <p/>
+        <label>List of boundaries for : <span id="registerName"></span></label>
+        <p/>
         <select id="list-of-boundaries-select"></select>
         <p/>
           <textarea
