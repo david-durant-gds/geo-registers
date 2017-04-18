@@ -29,15 +29,24 @@ function updateSelectOfRegistersWithBoundaries() {
 
       var $el = $("#registers-with-boundaries-select");
       $el.empty();
-      $.each(data.split("\n"), function(loopNumber, registerName) {
+      splitData = data.split("\n");
+      $.each(splitData, function(loopNumber, registerName) {
         $el.append($("<option></option>").attr("value", registerName).text(registerName));
       });
+
+      // Need to manually fire the change function for the first entry as onChange doesn't trigger unless a new thing is selected :-(
+      registerWithBoundarySelected(splitData[0]);
 
     })
     .fail(function() {
       alert( "updateSelectOfRegistersWithBoundaries failed!" );
     });
 
+}
+
+// Update text and select for list boundaries with a register that contains boundaries
+function registerWithBoundarySelected(boundary) {
+  $('#registerName').val(boundary);
 }
 
 // Re-centre and re-zoom a passed-in map
