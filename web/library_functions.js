@@ -29,6 +29,8 @@ function updateSelectOfRegistersWithBoundaries() {
 
       var $el = $("#registers-with-boundaries-select");
       $el.empty();
+      myArray = data.split("\n");
+      console.log(myArray);
       $.each(data.split("\n"), function(registerName) {
         $el.append($("<option></option>").attr("value", registerName).text(registerName));
       });
