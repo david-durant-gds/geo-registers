@@ -15,6 +15,8 @@ function pageStart(element) {
 function loadData(element) {
   if ($("#" + element).is('select')) {
 
+console.log(element + ".txt");
+
     var jqxhr = $.get(element + ".txt", { element: element })
       .done(function(data) {
         var $el = $("#" + element);
