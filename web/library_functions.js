@@ -13,10 +13,11 @@ function pageStart(element) {
 }
 
 function loadData(element) {
+
+console.log($("#" + element).is());
+
+/*
   if ($("#" + element).is('select')) {
-
-console.log(element + ".txt");
-
     var jqxhr = $.get(element + ".txt", { element: element })
       .done(function(data) {
         var $el = $("#" + element);
@@ -31,7 +32,6 @@ console.log(element + ".txt");
     });
 
   }
-/*
   else if (($("#" + element).is('textarea')) {
   
   
