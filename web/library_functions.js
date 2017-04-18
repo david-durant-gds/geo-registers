@@ -42,6 +42,7 @@ function registerSelectOnChanges() {
 
 function doOnChange() {
 
+  console.log("Huh?");
   console.log(this.id);
 
 }
