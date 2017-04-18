@@ -12,7 +12,7 @@ function pageStart(element) {
   });
 }
 
-function loadSelectData(element) {
+function loadData(element) {
   if ($("#" + element).is('select')) {
 
     var jqxhr = $.get(element + ".txt")
