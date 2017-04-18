@@ -34,18 +34,14 @@ function loadData(element, fromLocation) {
 
 }
 
-var fun = function doOnChange() {
+function registerSelectOnChanges() {
+  $('select').each(function() {
+    $("#" + this.id).change(doOnChange());
+  });
+}
+
+function doOnChange() {
 
   console.log(this.id);
 
 }
-
-function registerSelectOnChanges() {
-  $('select').each(function() {
-
-console.log(this.id);
-
-    this.change(fun);
-  });
-}
-
