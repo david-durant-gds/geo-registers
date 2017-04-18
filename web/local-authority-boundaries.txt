@@ -1,5 +1,5 @@
-Oxfordshire
-Hampshire
-Devon
-Lincolnshire
-Bath and Avon
+oxfordshire
+hampshire
+devon
+lincolnshire
+bath-and-Avon

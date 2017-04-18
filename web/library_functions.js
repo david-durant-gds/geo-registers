@@ -48,6 +48,31 @@ function updateSelectOfRegistersWithBoundaries() {
 function registerWithBoundarySelected() {
   selectedRegister = $( "#registers-with-boundaries-select option:selected" ).text();
   $('#registerName').text(selectedRegister);
+  
+  registerBoundaryList = selectedRegister . "-boundaries.txt";
+  var jqxhr = $.get(registerBoundaryList)
+    .done(function(data) {
+
+      var $el = $("#list-of-boundaries-select");
+      $el.empty();
+      splitData = data.split("\n");
+      $.each(splitData, function(loopNumber, registerName) {
+        $el.append($("<option></option>").attr("value", registerName).text(registerName));
+      });
+
+      // Need to manually fire the change function for the first entry as onChange doesn't trigger unless a new thing is selected :-(
+      specificBoundarySelected();
+
+    })
+    .fail(function() {
+      alert( "updateSelectOfRegistersWithBoundaries failed!" );
+    });  
+  
+}
+
+// Fill in the box with specific boundary data
+function specificBoundarySelected() {
+
 }
 
 // Re-centre and re-zoom a passed-in map
