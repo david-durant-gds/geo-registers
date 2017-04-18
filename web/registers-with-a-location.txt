@@ -1,0 +1,5 @@
+police-stations
+fire-stations
+registry-offices
+schools
+hospital-a-and-e
