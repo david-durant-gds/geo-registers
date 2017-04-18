@@ -17,20 +17,15 @@ function loadData(element) {
 
     var jqxhr = $.get(element + ".txt", { element: element })
       .done(function(data) {
-
-console.log(element);
-
-/*
         var $el = $("#" + element);
         $el.empty();
         splitData = data.split("\n");
         $.each(splitData, function(loopNumber, value) {
           $el.append($("<option></option>").attr("value", value).text(value));
       });
-*/
     })
     .fail(function() {
-//      alert("Failed to load select : " + this.id);
+      alert("Failed to load select : " + element);
     });
 
   }
