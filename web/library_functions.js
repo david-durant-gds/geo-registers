@@ -14,7 +14,7 @@ function registerSelectOnChanges() {
 
   console.log(globalWidgetData);
 
-  $("select").each(function() {
+  $(":select").each(function() {
     console.log($(this).id);
   });
 }
