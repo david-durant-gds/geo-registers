@@ -4,7 +4,7 @@
 function fiilLocationRegistersBox() {
   var jqxhr = $.get("registers-with-a-location.txt")
     .done(function(data) {
-      $("#registers-with-locations-box").val(data);
+      $("#registers-with-locations-box").val(data).replace("\n", "<br />", "g");
     })
     .fail(function() {
       alert( "Failed to get data to put in a text box!" );
