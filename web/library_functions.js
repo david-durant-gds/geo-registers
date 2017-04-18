@@ -39,11 +39,11 @@ function registerSelectOnChanges() {
 
 console.log(this.id);
 
-//    this.change(doOnChange());
+    this.change(doOnChange());
   });
 }
 
-function doOnChange(firstSelect) {
+function doOnChange() {
 
   console.log(this.id);
 
