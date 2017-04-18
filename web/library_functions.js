@@ -12,10 +12,8 @@ function pageStart(firstSelect) {
 
 function registerSelectOnChanges() {
 
-  console.log(globalWidgetData);
-
-  $(".select").each(function() {
-    console.log($(this).id);
+  $('select').each(function() {
+    console.log(this.id);
   });
 }
 
