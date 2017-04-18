@@ -6,9 +6,7 @@ function pageStart(element) {
   $.getJSON("global-widget-data.json", function(result){
     globalWidgetData = result;  
     loadData(element, element);
-
-//    registerSelectOnChanges();
-
+    registerSelectOnChanges();
   });
 }
 
@@ -36,13 +34,7 @@ function loadData(element, fromLocation) {
 
 }
 
-
-
-
-
-
 function registerSelectOnChanges() {
-
   $('select').each(function() {
     this.change(doOnChange());
   });
