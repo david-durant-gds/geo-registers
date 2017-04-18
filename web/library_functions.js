@@ -46,7 +46,8 @@ function updateSelectOfRegistersWithBoundaries() {
 
 // Update text and select for list boundaries with a register that contains boundaries
 function registerWithBoundarySelected() {
-  $('#registerName').text($( "#registers-with-boundaries-select option:selected" ).text(););
+  selectedRegister = $( "#registers-with-boundaries-select option:selected" ).text();
+  $('#registerName').text(selectedRegister);
 }
 
 // Re-centre and re-zoom a passed-in map
