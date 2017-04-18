@@ -4,7 +4,7 @@
 function urlToBox(url, box) {
   var jqxhr = $.get(url)
     .done(function(data) {
-      $(box).val(data);
+      $("$" . box).val(data);
     })
     .fail(function() {
       alert( "Failed to get data to put in a text box!" );
