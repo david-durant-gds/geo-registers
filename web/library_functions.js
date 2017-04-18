@@ -49,7 +49,7 @@ function registerWithBoundarySelected() {
   selectedRegister = $( "#registers-with-boundaries-select option:selected" ).text();
   $('#registerName').text(selectedRegister);
   
-  registerBoundaryList = selectedRegister . "-boundaries.txt";
+  registerBoundaryList = selectedRegister + "-boundaries.txt";
   var jqxhr = $.get(registerBoundaryList)
     .done(function(data) {
 
