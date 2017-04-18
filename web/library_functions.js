@@ -15,10 +15,10 @@ function pageStart(element) {
 function loadData(element) {
   if ($("#" + element).is('select')) {
 
-    var jqxhr = $.get(element + ".txt")
+    var jqxhr = $.get(element + ".txt", { element: element })
       .done(function(data) {
 
-console.log(this.id);
+console.log(element);
 
 /*
         var $el = $("#" + element);
