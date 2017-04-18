@@ -75,7 +75,7 @@ function specificBoundarySelected() {
   selectedBoundary = $( "#list-of-boundaries-select option:selected" ).text();
 
   registerBoundaryData = selectedBoundary + "-boundary-data.txt";
-  var jqxhr = $.get(registerBoundaryList)
+  var jqxhr = $.get(registerBoundaryData)
     .done(function(data) {
       $("#specific-boundary-data-box").val(data);
     })
