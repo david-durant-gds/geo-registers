@@ -36,17 +36,10 @@ function loadData(element, fromLocation) {
 
 function registerSelectOnChanges() {
   $('select').each(function() {
-  
-  console.log("#" + this.id);
-  $("#registers-with-boundaries").change(doOnChange);
-  
-//    $("#" + this.id).change(doOnChange());
+    $("#" + this.id).change(doOnChange);
   });
 }
 
 function doOnChange() {
-
-  console.log("Huh?");
   console.log(this.id);
-
 }
