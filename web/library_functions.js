@@ -71,14 +71,10 @@ function registerSelectOnChanges() {
 }
 
 function doOnChange() {
-
-console.log(this.id);
-
-if ("one" == "one") {
-  console.log("Bugger");
-}
-
   globalWidgetData.forEach(function(data) {
+
+console.log(data[0] + " : " + this.id);
+
     if (data[0] == this.id) {
       if (data[2] != "") {
         loadData(data[2]);
