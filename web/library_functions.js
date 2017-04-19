@@ -1,17 +1,31 @@
 // Library functions 2 (the revenge)
 
-var globalWidgetData;
+var globalWidgetData = [
+  ["registers-with-locations", "registers-with-locations", ""],
+  ["registers-with-boundaries", "registers-with-boundaries", ""],
+  ["registers-with-boundaries-select", "registers-with-boundaries", "list-of-boundaries-select"]
+  ["list-of-boundaries-select", "_registers-with-boundaries-select", "specific-boundary-data-box"]
+  ["specific-boundary-data-box", "_registers-with-boundaries-select_list-of-boundaries-select", ""]
+];
 
 function pageStart(element) {
-  $.getJSON("global-widget-data.json", function(result){
-    globalWidgetData = result;  
-    loadData(element, element);
-    registerSelectOnChanges();
-  });
+  loadData(element, element);
+  registerSelectOnChanges();
 }
 
-function loadData(element, fromLocation) {
+function loadData(element) {
 
+  // Work out where we're getting our data from
+  var fromLocation;
+  globalWidgetData.each(function() {
+    if (this[0] === element) {
+      if (this[1].slice(0,1) !== "_") {
+        fromLocation = this[1];
+      }
+    }
+  });
+
+  // Load the data from that location and update the element
   var jqxhr = $.get(fromLocation + ".txt", { element: element })
     .done(function(data) {
       var $el = $("#" + element);
@@ -27,6 +41,13 @@ function loadData(element, fromLocation) {
         $el.val(data);
       } 
       
+      // If updating that element cascades other elements, make it so!
+      globalWidgetData.each(function() {
+        if ((this[0] === this.id) && (this[2] !== "")) {
+          loadData(this[2]);
+        }
+      });
+      
     })
     .fail(function() {
       alert("Failed to load select : " + element);
@@ -41,5 +62,9 @@ function registerSelectOnChanges() {
 }
 
 function doOnChange() {
-  console.log(this.id);
+  globalWidgetData.each(function() {
+    if ((this[0] === this.id) && (this[2] !== "")) {
+      loadData(this[2]);
+    }
+  });
 }
