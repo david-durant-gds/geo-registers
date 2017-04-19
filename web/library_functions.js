@@ -16,7 +16,7 @@ function pageStart(element) {
 function loadData(element) {
 
   // Work out where we're getting our data from
-  var fromLocation = "data/";
+  var fromLocation;
   globalWidgetData.forEach(function(data) {
     if (data[0] === element) {
       if (data[1].slice(0,1) !== "_") {
@@ -34,7 +34,7 @@ function loadData(element) {
   });
 
   // Load the data from that location and update the element
-  var jqxhr = $.get(fromLocation + ".txt", { element: element })
+  var jqxhr = $.get("data/" + fromLocation + ".txt", { element: element })
     .done(function(data) {
       var $el = $("#" + element);
       $el.empty();
