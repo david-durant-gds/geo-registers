@@ -3,6 +3,15 @@
     <Title>Firebreak : Experimenting with geographical data and registers!</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="https://enigmatic-dusk-83533.herokuapp.com/library_functions.js" type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5gn8tpo6nDD0x6kdIVdvQZKJMz8iRzrs&callback=initMap"></script>
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+
   </head>
   
   <body onload="pageStart('registers-with-boundaries-select')">
@@ -28,7 +37,8 @@
     </form>
     
     <p/>
-    MAP IN HERE OF COURSE
+    <div id="map"></div>
+    
     <p/>
     
     <a href="index.php">Go back to main page</a>
