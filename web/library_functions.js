@@ -34,7 +34,7 @@ function loadData(element) {
   });
 
   // Load the data from that location and update the element
-  var jqxhr = $.get("data/" + fromLocation + ".txt", { element: element })
+  var jqxhr = $.get("https://enigmatic-dusk-83533.herokuapp.com/data/" + fromLocation + ".txt", { element: element })
     .done(function(data) {
       var $el = $("#" + element);
       $el.empty();
