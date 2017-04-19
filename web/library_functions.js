@@ -22,13 +22,15 @@ function loadData(element) {
       if (data[1].slice(0,1) !== "_") {
         fromLocation = data[1];
       }
-    }
-    else {
-      bits = data[1].split("_");
-      for (i = 0; i < bits.length; i++) {
-        fromLocation = fromLocation + $("#" + bits[i]).find(":selected").text() + "_";
+      else 
+      {
+        bits = data[1].split("_");
+        for (i = 0; i < bits.length; i++) {
+          fromLocation = fromLocation + $("#" + bits[i]).find(":selected").text() + "_";
+        }
+        fromLocation = fromLocation.slice(0, -1);
       }
-      fromLocation = fromLocation.slice(0, -1);
+      break;
     }
   });
 
