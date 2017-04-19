@@ -71,6 +71,9 @@ function registerSelectOnChanges() {
 }
 
 function doOnChange() {
+
+console.log(this.id);
+
   globalWidgetData.forEach(function(data) {
     if ((data[0] === this.id) && (data[2] !== "")) {
       loadData(data[2]);
