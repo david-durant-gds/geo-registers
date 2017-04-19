@@ -3,8 +3,8 @@
 var globalWidgetData = [
   ["registers-with-locations", "registers-with-locations", ""],
   ["registers-with-boundaries", "registers-with-boundaries", ""],
-  ["registers-with-boundaries-select", "registers-with-boundaries", "list-of-boundaries-select"]
-  ["list-of-boundaries-select", "_registers-with-boundaries-select", "specific-boundary-data-box"]
+  ["registers-with-boundaries-select", "registers-with-boundaries", "list-of-boundaries-select"],
+  ["list-of-boundaries-select", "_registers-with-boundaries-select", "specific-boundary-data-box"],
   ["specific-boundary-data-box", "_registers-with-boundaries-select_list-of-boundaries-select", ""]
 ];
 
