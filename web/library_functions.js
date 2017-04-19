@@ -51,7 +51,7 @@ function loadData(element) {
       
       // If updating that element cascades other elements, make it so!
       globalWidgetData.forEach(function(data) {
-        if ((data[0] === this.id) && (data[2] !== "")) {
+        if ((data[0] === element) && (data[2] !== "")) {
           loadData(data[2]);
         }
       });
