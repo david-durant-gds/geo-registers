@@ -25,6 +25,7 @@ function loadData(element) {
       else 
       {
         bits = data[1].split("_");
+        bits.shift();
         for (i = 0; i < bits.length; i++) {
           fromLocation = fromLocation + $("#" + bits[i]).find(":selected").text() + "_";
         }
