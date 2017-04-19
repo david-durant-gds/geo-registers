@@ -17,7 +17,7 @@ function loadData(element) {
 
   // Work out where we're getting our data from
   var fromLocation;
-  globalWidgetData.each(function() {
+  globalWidgetData.foreach(function() {
     if (this[0] === element) {
       if (this[1].slice(0,1) !== "_") {
         fromLocation = this[1];
@@ -42,7 +42,7 @@ function loadData(element) {
       } 
       
       // If updating that element cascades other elements, make it so!
-      globalWidgetData.each(function() {
+      globalWidgetData.foreach(function() {
         if ((this[0] === this.id) && (this[2] !== "")) {
           loadData(this[2]);
         }
@@ -62,7 +62,7 @@ function registerSelectOnChanges() {
 }
 
 function doOnChange() {
-  globalWidgetData.each(function() {
+  globalWidgetData.foreach(function() {
     if ((this[0] === this.id) && (this[2] !== "")) {
       loadData(this[2]);
     }
