@@ -16,7 +16,7 @@ function pageStart(element) {
 function loadData(element) {
 
   // Work out where we're getting our data from
-  var fromLocation;
+  var fromLocation = "";
   globalWidgetData.forEach(function(data) {
     if (data[0] === element) {
       if (data[1].slice(0,1) !== "_") {
@@ -26,7 +26,6 @@ function loadData(element) {
       {
         bits = data[1].split("_");
         bits.shift();
-        var fromLocation;
         for (i = 0; i < bits.length; i++) {
           fromLocation = fromLocation + $("#" + bits[i]).find(":selected").text() + "_";
         }
