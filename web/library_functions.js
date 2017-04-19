@@ -16,12 +16,19 @@ function pageStart(element) {
 function loadData(element) {
 
   // Work out where we're getting our data from
-  var fromLocation;
+  var fromLocation = "data/";
   globalWidgetData.forEach(function(data) {
     if (data[0] === element) {
       if (data[1].slice(0,1) !== "_") {
         fromLocation = data[1];
       }
+    }
+    else {
+      bits = data[1].split("_");
+      for (i = 0; i < bits.length; i++) {
+        fromLocation = fromLocation + $("#" + bits[i]).find(":selected").text() + "_";
+      }
+      fromLocation = fromLocation.slice(0, -1);
     }
   });
 
