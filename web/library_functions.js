@@ -9,7 +9,7 @@ var globalWidgetData = [
 ];
 
 function pageStart(element) {
-  loadData(element, element);
+  loadData(element);
   registerSelectOnChanges();
 }
 
