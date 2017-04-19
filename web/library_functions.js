@@ -30,7 +30,6 @@ function loadData(element) {
         }
         fromLocation = fromLocation.slice(0, -1);
       }
-      break;
     }
   });
 
