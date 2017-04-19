@@ -5,7 +5,8 @@ var globalWidgetData = [
   ["registers-with-boundaries", "registers-with-boundaries", ""],
   ["registers-with-boundaries-select", "registers-with-boundaries", "list-of-boundaries-select"],
   ["list-of-boundaries-select", "_registers-with-boundaries-select", "specific-boundary-data-box"],
-  ["specific-boundary-data-box", "_registers-with-boundaries-select_list-of-boundaries-select", ""]
+  ["specific-boundary-data-box", "_registers-with-boundaries-select_list-of-boundaries-select", ""],
+  ["registers-with-location-select", "registers-with-locations", ""]
 ];
 
 function pageStart(element) {
